@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <script>
+
+      function formKontrol()
+      {
+        var isim_kontrol = document.forms["iletisimFormu"]["ad-soyad"].value;
+        var email_kontrol = document.forms["iletisimFormu"]["email"].value;
+        var tarih_kontrol = document.forms["iletisimFormu"]["tarih"].value;
+        var yas_kontrol = document.forms["iletisimFormu"]["yas"].value;
+        var cinsiyet_kontrol = document.forms["iletisimFormu"]["cinsiyet"].value;
+        var telefon_kontrol = document.forms["iletisimFormu"]["telefon"].value;
+        var sehir_kontrol = document.forms["iletisimFormu"]["sehir"].value;
+        var mesaj_kontrol = document.forms["iletisimFormu"]["mesaj"].value;
+
+        if (isim_kontrol == "") 
+        {
+          alert("Lütfen Ad-Soyadınızı eksiksiz giriniz.");
+          return false;
+        }
+        if (email_kontrol == "") 
+        {
+          alert("Lütfen E-postanızı eksiksiz giriniz.");
+          return false;
+        }
+        if (email_kontrol.includes("@") == 0)
+        {
+          alert("Lütfen E-postanızı eksiksiz giriniz.");
+          return false;
+        }
+        if (tarih_kontrol == "") 
+        {
+          alert("Lütfen doğum tarihinizi eksiksiz giriniz.");
+          return false;
+        }
+        if (yas_kontrol == "") 
+        {
+          alert("Lütfen yaşınızı eksiksiz giriniz.");
+          return false;
+        }
+        if (cinsiyet_kontrol == "") 
+        {
+          alert("Lütfen cinsiyetinizi eksiksiz giriniz.");
+          return false;
+        }
+        if (telefon_kontrol == "") 
+        {
+          alert("Lütfen telefon numaranızı eksiksiz giriniz.");
+          return false;
+        }
+        if (sehir_kontrol == "") 
+        {
+          alert("Lütfen şehrinizi eksiksiz giriniz.");
+          return false;
+        }
+        if (mesaj_kontrol == "") 
+        {
+          alert("Lütfen mesajınızı eksiksiz giriniz.");
+          return false;
+        }       
+      }
+    </script>
+    
+</head>
+<body>
+
+    <nav class = "navbar navbar-dark bg-dark navbar-expand-lg text-white fixed-top">
+        <div class = "container py-1">
+            <a href="index.html" class = "navbar-brand">MGC</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-MGC" aria-controls="navbar-MGC">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+            <div class ="collapse navbar-collapse" id="navbar-MGC">
+                <ul class = "navbar-nav ml-auto">
+                    <li class = "nav-item px-2"> 
+                        <a href ="index.html" class ="nav-link" target="_self">Hakkımda</a>
+                    </li>
+                    <li class = "nav-item px-2"> 
+                        <a href ="takimim.html" class ="nav-link">Mirasımız</a>
+                    </li>
+                    <li class = "nav-item dropdown px-2"> 
+                      <a class="nav-link dropdown-toggle" href="sehrim.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Şehrim
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="sehrim.html">Adıyaman</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="nemrutdagi.html">Nemrut Dağı</a>
+                        <a class="dropdown-item" href="ulucami.html">Ulu Cami</a>
+                        <a class="dropdown-item" href="cenderekoprusu.html">Cendere Köprüsü</a>
+                        <a class="dropdown-item" href="perreantikkenti.html">Perre Antik Kenti</a>
+                      </div>                      
+                    </li>
+                    <li class = "nav-item px-2"> 
+                        <a href ="özgecmis.html" class ="nav-link">ÖzGeçmişim</a>
+                    </li>
+                    <li class = "nav-item px-2"> 
+                      <a href ="ilgialanlarim.html" class ="nav-link">İlgi Alanlarım</a>
+                    </li>
+                    <li class = "nav-item pl-2"> 
+                        <a href ="iletisim.html" class ="nav-link">İletişim</a>
+                    </li>
+                    <li class = "nav-item pl-2"> 
+                        <a href ="login.html" class ="nav-link">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="iletisim"> 
+        <div class="bg-dark" style="padding-left: 70px; padding-top: 60px;">  
+                <div id="uyari">
+                    <h1 class="text-center" style="padding-right: 50px;">İLETİŞİM FORMU</h1>  
+                </div>
+
+    <form onsubmit="return formKontrol()" class="form-horizontal" action="iletisimgit.html" method="POST" name="iletisimFormu">
+        <div class="form-group">    
+          <label class="control-label col-sm-7" for="ad-soyad">Ad-Soyad:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="ad-soyad" name="ad-soyad" placeholder="Ad-Soyad">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-7" for="email">E-mail:</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-7" for="tarih">Doğum Tarihi:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="tarih" name="tarih" placeholder="tarih">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-7" for="yas">Yaşınız:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="yas" name="yas" placeholder="Yaş">
+            </div>
+          </div> 
+          
+          <div class="form-group">
+            <label class="control-label col-sm-7" for="cinsiyet">Cinsiyet:</label>
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="radio">
+              Erkek  <input type="radio" id="erkek" name="cinsiyet" value="Erkek">
+              Kız    <input type="radio" id="kız" name="cinsiyet" value="Kız">              
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-7" for="tel">Cep Telefonu:</label>
+            <div class="col-sm-10">
+              <input type="tel" name="telefon" id="telefon" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="5xx-xxx-xxxx" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-7" for="sehir">Şehir:</label>
+            <div class="col-sm-10">
+              <select name="sehir" id="sehir" class="form-control">
+                <option value="0">Seçiniz</option>
+                <option value="1">Adana</option>
+                <option value="2">Adıyaman</option>
+                <option value="3">Afyonkarahisar</option>
+                <option value="4">Ağrı</option>
+                <option value="5">Amasya</option>
+                <option value="6">Ankara</option>
+                <option value="7">Antalya</option>
+                <option value="8">Artvin</option>
+                <option value="9">Aydın</option>
+                <option value="10">Balıkesir</option>
+                <option value="11">Bilecik</option>
+                <option value="12">Bingöl</option>
+                <option value="13">Bitlis</option>
+                <option value="14">Bolu</option>
+                <option value="15">Burdur</option>
+                <option value="16">Bursa</option>
+                <option value="17">Çanakkale</option>
+                <option value="18">Çankırı</option>
+                <option value="19">Çorum</option>
+                <option value="20">Denizli</option>
+                <option value="21">Diyarbakır</option>
+                <option value="22">Edirne</option>
+                <option value="23">Elazığ</option>
+                <option value="24">Erzincan</option>
+                <option value="25">Erzurum</option>
+                <option value="26">Eskişehir</option>
+                <option value="27">Gaziantep</option>
+                <option value="28">Giresun</option>
+                <option value="29">Gümüşhane</option>
+                <option value="30">Hakkâri</option>
+                <option value="31">Hatay</option>
+                <option value="32">Isparta</option>
+                <option value="33">Mersin</option>
+                <option value="34">İstanbul</option>
+                <option value="35">İzmir</option>
+                <option value="36">Kars</option>
+                <option value="37">Kastamonu</option>
+                <option value="38">Kayseri</option>
+                <option value="39">Kırklareli</option>
+                <option value="40">Kırşehir</option>
+                <option value="41">Kocaeli</option>
+                <option value="42">Konya</option>
+                <option value="43">Kütahya</option>
+                <option value="44">Malatya</option>
+                <option value="45">Manisa</option>
+                <option value="46">Kahramanmaraş</option>
+                <option value="47">Mardin</option>
+                <option value="48">Muğla</option>
+                <option value="49">Muş</option>
+                <option value="50">Nevşehir</option>
+                <option value="51">Niğde</option>
+                <option value="52">Ordu</option>
+                <option value="53">Rize</option>
+                <option value="54">Sakarya</option>
+                <option value="55">Samsun</option>
+                <option value="56">Siirt</option>
+                <option value="57">Sinop</option>
+                <option value="58">Sivas</option>
+                <option value="59">Tekirdağ</option>
+                <option value="60">Tokat</option>
+                <option value="61">Trabzon</option>
+                <option value="62">Tunceli</option>
+                <option value="63">Şanlıurfa</option>
+                <option value="64">Uşak</option>
+                <option value="65">Van</option>
+                <option value="66">Yozgat</option>
+                <option value="67">Zonguldak</option>
+                <option value="68">Aksaray</option>
+                <option value="69">Bayburt</option>
+                <option value="70">Karaman</option>
+                <option value="71">Kırıkkale</option>
+                <option value="72">Batman</option>
+                <option value="73">Şırnak</option>
+                <option value="74">Bartın</option>
+                <option value="75">Ardahan</option>
+                <option value="76">Iğdır</option>
+                <option value="77">Yalova</option>
+                <option value="78">Karabük</option>
+                <option value="79">Kilis</option>
+                <option value="80">Osmaniye</option>
+                <option value="81">Düzce</option>
+            </select>
+            </div>
+          </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-7" for="dil">Yabancı Dil:</label>
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <input type="checkbox" id="ingilizce" name="dil" value="İngilizce"> İngilizce
+              <input type="checkbox" id="almanca" name="dil"> Almanca
+              <input type="checkbox" id="japonca" name="dil"> Japonca
+              <input type="checkbox" id="fransızca" name="dil"> Fransızca
+            </div>
+          </div>
+        </div>        
+
+        <div class="form-group">
+            <label for="textarea" class="control-label col-sm-7">Kendinizi Bir Cümle İle Açıklayınız</label>
+            <div class="col-sm-10">
+                <textarea id="mesaj" name="mesaj" id="mesaj" cols="50" rows="5" class="form-control"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-7" for="resim">Resim Yükle</label>
+            <div class="col-sm-10">
+                <input type="file" name="belge" id="belge">
+            </div>
+          </div><br>
+
+          <div class="form-group" style="padding-left: 30px;">
+            <input type="reset" value="SIFIRLA" class="btn btn-danger px-5">
+            <input type="submit" value="GÖNDER" onclick="formKontrol()" class="btn btn-success px-5" name="gonder" id="gonder">
+          </div>
+
+
+    </form>
+    </div>
+</section>
+<footer class="bg-dark text-center">
+    <div class="container">
+      <div class="row pt-5 mb-3"></div>
+      
+      <div class="">
+        <a class="li-ic" href="https://www.linkedin.com/in/muhammed-%C3%A7elenk-a4803b157/" target="_blank">
+            <i class="fab fa-linkedin text-white mr-4"> </i>
+          </a>
+          <a class="ins-ic" href="https://www.instagram.com/karakedi1965/" target="_blank">
+            <i class="fab fa-instagram text-white mr-4"> </i>
+          </a>       
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3 text-white">© Muhammed Çelenk</div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
